@@ -1,0 +1,387 @@
+.presentation{
+    background: url("../img/bg.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 0px;
+}
+.presentation .subtitle{
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    text-transform:capitalize;
+    line-height: .1;
+}
+
+.banner{
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px 50px;
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+
+.listing-appartments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px 30px 0px;
+}
+
+.container-flex{
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 0px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container-flex .box-flex{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 0px;
+    transition: all .3s ease-in-out;
+}
+.container-flex .box-flex:hover{
+    transform: scale(104%);
+    border-radius: 12px;
+}
+
+.box-flex img{
+    width: 233px;
+    height: auto;
+}
+
+
+.box-flex p{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: var(--primary-color);
+    color: var(--textprix-color);
+    font-weight: 500;
+}
+
+.box-flex dl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 8px;
+}
+
+.box-flex dt{
+    color: var(--texttitre-color);
+    font-family: var(--primary-font);
+    font-size: .8em;
+    font-weight: 900;
+    letter-spacing: 1.1px;
+    margin-bottom: 5px;
+}
+.box-flex dd{
+    color: var(--textdescription-color);
+    font-family: var(--primary-font);
+    font-size: .6em;
+}
+
+.box-flex p.animation,
+.box-flex dt.animation{
+    animation-timeline: view(block 0% 10%);
+    animation-name: grow;
+    animation-fill-mode:both;
+    animation-duration: 1s; /* Firefox requires this to apply the animation */
+    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.listing-appartments button{
+    border: 1px solid var(--secondary-color);
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: .6em;
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: all .8s ease-in-out;
+    cursor: pointer;
+}
+
+.listing-appartments button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.footer-flex{
+    display:  flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    font-family: var(--primary-font);
+    margin: 20px;
+    padding: 0px;
+}
+
+.footer-flex h3{
+    font-weight: 400;
+    font-size: .7em;
+    margin: 10px 15px 10px 15px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.footer-flex p{
+    font-weight: 400;
+    font-size: .7em;
+    line-height: 2;
+    margin: 12px 0px 20px 0px;
+    padding: 0px;
+    color: var(--primary-color);
+}
+
+
+.footer-flex .footer-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 100px;
+}
+
+.footer-row .footer-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-flex .footer-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0px;
+}
+
+.footer-flex .footer-col p{
+    margin: 5px 0px 40px 0px;
+}
+
+.footer-flex .footer-col .socialmedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.footer-flex .footer-col .socialmedia i{
+    font-size: .8em;
+}
+.footer-flex .footer-col .socialmedia a{
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.footer-flex .footer-col .socialmedia a:hover,
+.footer-flex .footer-row .footer-box h3:hover{
+    color: #f7bf0a;
+}
+footer .trait{
+    width: 70%;
+    height: .01em;
+    background-color: var(--primary-color);
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+}
+
+footer p.copyright{
+    font-size: .7em;
+    color: var(--primary-color);
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1400px){
+    .container-flex{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container-flex{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        margin-top: 20px;
+    }
+    .invisible{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0px 10px 0px;
+        color: var(--primary-color);
+    }
+    .invisible .subtitle{
+        color: var(--primary-color);
+        font-family: var(--primary-font);
+        font-size: 0.8rem;
+        text-transform:capitalize;
+        line-height: .1;
+    }
+    .presentation{
+        height: 82vh;
+    }
+    .presentation h1,
+    .presentation .subtitle{
+        display: none;
+    }
+    .container-flex{
+        max-width: 90%;
+    }
+    .box-flex p.animation,
+    .box-flex dt.animation{
+    animation-timeline: view(block 20% 0%);
+    animation-name: grow;
+    animation-fill-mode:forwards;
+    animation-duration: 1s; /* Firefox requires this to apply the animation */
+    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+
+    .footer-flex{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .footer-flex .footer-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .footer-flex .footer-row .footer-box{
+        margin-right: 50px;
+    }
+
+    .footer-flex .footer-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 0px;
+    }
+    .footer-flex .footer-col p{
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+        font-size: .7em;
+    }
+    .footer-flex .footer-col .socialmedia{
+        margin-bottom: 30px;
+    }
+    footer .trait{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:575){
+    .footer-flex .footer-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-flex .footer-row .footer-box{
+        margin-right: 0px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .footer-flex .footer-row .footer-box h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px){
+    header nav {
+        background: radial-gradient(circle at top, #0f161a23 60%, #7bafc952, transparent),
+                radial-gradient(circle at bottom, #0f161a23 0%, #7bafc952, transparent);
+    }
+    nav ul{
+        list-style-type: none;
+    display: flex;
+    justify-content: center;
+        width: 200px;
+    }
+    .invisible{
+        padding: 30px 0px 0px 0px;
+    }
+    .invisible h1{
+        text-align: center;
+        font-size: 60px;
+        line-height: 1;
+    }
+    .banner i{
+        display: none;
+    }
+    .container-flex .box-flex{
+        width: 90%;
+    }
+    .box-flex img {
+        width: 100%;
+        height: auto;
+    }
+    .footer-flex .footer-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-flex .footer-row .footer-box{
+        margin-right: 0px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .footer-flex .footer-row .footer-box h3{
+        text-align: center;
+    }
+}
+

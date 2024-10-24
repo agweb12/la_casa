@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Ephesis&display=swap');
+
+:root{
+    --primary-font: 'Alegreya Sans', sans-serif;
+    --secondary-font: 'Ephesis';
+
+    --primary-color: #fbfcfd;
+    --secondary-color: #7bafc9;
+    --tertiary-color: #c1d2d9;
+
+    --textprix-color: #393939;
+    --texttitre-color: #606060;
+    --textdescription-color: #cecece;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 100;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+h2{
+    font-size: 18px;
+    font-weight: 800;
+    word-spacing: .4em;
+}
+
+p{
+    font-family: var(--primary-font);
+    padding: 5px 10px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: .8rem 2rem;
+    background: radial-gradient(circle at top, #5884989d 60%, #7bafc9, transparent),
+                radial-gradient(circle at bottom, #5884989d 0%, #7bafc9, transparent);
+    z-index: 1;
+}
+
+nav .logo a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: var(--secondary-font);
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;    
+    width: 300px;
+}
+
+nav ul li a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: .8rem;
+    transition: all 1s ease-in-out;
+
+}
+nav ul li a.active{
+    border: 2px solid var(--primary-color);
+}
+
+nav ul li a:hover{
+    background-color: var(--secondary-color);
+
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.invisible{
+    display: none;
+}
+
